@@ -1,0 +1,76 @@
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="/images/aurolabs-logo.png" alt="Aurolabs Logo"></a>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible links -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Know Us</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="all-products.html">Our Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="reach-us.html">Reach Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap JS Bundle (must be included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    (function initActiveNav() {
+      // Scope to this header instance
+      const header = document.currentScript.closest('nav') || document;
+      const links = header.querySelectorAll('.navbar a.nav-link');
+      if (!links.length) return;
+
+      // Current path pieces
+      const url = new URL(window.location.href);
+      const path = url.pathname.replace(/\/+$/, '');             // strip trailing /
+      const file = path.split('/').pop() || 'index.html';        // last segment or index.html
+      const fileNoExt = file.replace(/\.html?$/i, '');           // products
+
+      links.forEach(a => {
+        const href = a.getAttribute('href') || '';
+        if (!href || href === '#') return;                       // skip placeholders
+
+        // Normalize target
+        const target = href.replace(/\/+$/, '');
+        const targetFile = target.split('/').pop();
+        const targetNoExt = targetFile.replace(/\.html?$/i, '');
+
+        // Match rules:
+        // 1) Exact file match (about.html === about.html)
+        // 2) No-ext match (about === about or /about)
+        // 3) Pretty URL segment match (/about or /about/)
+        const isMatch =
+          file === targetFile ||
+          fileNoExt === targetNoExt ||
+          path.endsWith('/' + targetNoExt);
+
+        if (isMatch) {
+          a.classList.add('active');                // Bootstrap uses .active
+          a.setAttribute('aria-current', 'page');   // a11y
+        }
+      });
+    })();
+  </script>
+</header>
