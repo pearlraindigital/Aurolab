@@ -203,7 +203,7 @@
                 </aside>
 
                 <!-- Right: Products -->
-                <section class="col-lg-10 col-md-8 g-3 product-bar ps-sm-3 ps-0 mt-0 pt-3">
+                <section class="col-lg-10 col-md-8 g-3 product-bar ps-0 mt-0 pt-3">
                     <div class="category-heading">
                         <div class="d-flex align-items-center mb-3">
                             <span class="me-2" id="categorySubDescriptions"></span>
@@ -429,19 +429,6 @@
                                     </svg>`,
             }
         };
-
-        function updateCategoryText(cat) {
-            const data = categoryDescriptions[cat] || categoryDescriptions["All"];
-            const h = document.getElementById('categoryHeading');
-            const d1 = document.getElementById('categoryDescriptions');
-            const d2 = document.getElementById('categorySubDescriptions');
-            if (h) h.textContent = data.heading;
-            if (d1) d1.textContent = data.desc;
-            if (d2) d2.innerHTML = data.sub;
-            console.log('data heading', data.heading);
-        }
-
-
 
 
         // Product Data (updated with requested categories & tags)
@@ -929,8 +916,65 @@
         ];
 
 
+        function updateCategoryText(cat) {
+            const data = categoryDescriptions[cat] || categoryDescriptions["All"];
+            const h = document.getElementById('categoryHeading');
+            const d1 = document.getElementById('categoryDescriptions');
+            const d2 = document.getElementById('categorySubDescriptions');
+            if (h) h.textContent = data.heading;
+            if (d1) d1.textContent = data.desc;
+            if (d2) d2.innerHTML = data.sub;
+            console.log('data heading', data.heading);
+        }
 
         // Product Data (updated with requested categories & tags)
+
+
+        // Function to render tags based on the selected category
+        function renderTagsForCategory(category) {
+            const filteredProducts = products.filter(p => p.category === category);
+
+            // Get all unique tags for the filtered products
+            const tagsForCategory = ["All", ...new Set(filteredProducts.map(product => product.tag))];
+
+            const tagBar = document.getElementById('tagBar');
+            tagBar.innerHTML = ''; // Clear existing tags
+
+            // If there are valid tags, render them, otherwise hide the tag bar
+            if (tagsForCategory.length > 1) {  // More than just "All"
+                tagsForCategory.forEach((tag, index) => {
+                    const btn = document.createElement('button');
+                    btn.type = "button";
+                    btn.className = `tag-btn${index === 0 ? ' active' : ''}`; // Set first tag as active
+                    btn.dataset.tag = tag;
+                    btn.textContent = tag;
+                    tagBar.appendChild(btn);
+                });
+
+                // Add event listener for tag filtering
+                tagBar.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('tag-btn')) {
+                        const selectedTag = e.target.dataset.tag;
+
+                        // Highlight active button
+                        document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                        e.target.classList.add('active');
+
+                        // Filter products by tag
+                        const filteredProducts = selectedTag === 'All'
+                            ? products.filter(p => p.category === category)
+                            : products.filter(p => p.category === category && p.tag === selectedTag);
+
+                        renderProducts(filteredProducts); // Render the filtered products
+                    }
+                });
+            } else {
+                // No valid tags, hide the tag bar
+                tagBar.style.display = 'none';
+            }
+        }
+
+
 
         // State
         let currentCategory = "All";
@@ -1040,29 +1084,24 @@
             return `${count} result${count === 1 ? '' : 's'}${scopeText}${qText}`;
         }
 
-        function applyFilters() {
-            const q = els.searchInput.value.trim().toLowerCase();
-            const filtered = products.filter(p => {
-                const inCategory = currentCategory === 'All' || p.category === currentCategory;
-                const inTag = currentTag === 'All' || p.tag === currentTag;
-                const inSearch = !q || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
-                return inCategory && inTag && inSearch;
-            });
-            renderProducts(filtered);
-        }
 
-        // Category click (event delegation)
+        // Category click event listener
         els.categoryList.addEventListener('click', (e) => {
             const item = e.target.closest('.list-group-item');
             if (!item) return;
-            // visual active
+
+            // Visual active state
             [...els.categoryList.children].forEach(li => li.classList.remove('active'));
             item.classList.add('active');
-            // state
+
+            // Set current category state
             currentCategory = item.dataset.category;
-            // When category changes, keep current tag and search as-is
+
+            // Update category text and render tags for the selected category
             updateCategoryText(currentCategory);
-            applyFilters();
+            renderTagsForCategory(currentCategory);
+            renderProducts(products);
+            updateCategoryText(currentCategory);
         });
 
         // Tag bar click (event delegation)
@@ -1076,6 +1115,19 @@
             currentTag = btn.dataset.tag;
             applyFilters();
         });
+
+
+        // Apply filters for both category and tag
+        function applyFilters() {
+            const q = els.searchInput.value.trim().toLowerCase();
+            const filtered = products.filter(p => {
+                const inCategory = currentCategory === 'All' || p.category === currentCategory;
+                const inTag = currentTag === 'All' || p.tag === currentTag;
+                const inSearch = !q || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
+                return inCategory && inTag && inSearch;
+            });
+            renderProducts(filtered); // Render filtered products
+        }
 
         // Search input
         els.searchInput.addEventListener('input', applyFilters);
