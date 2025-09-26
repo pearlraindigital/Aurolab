@@ -331,9 +331,9 @@ input#searchInput:focus {
 
 .cta-content {
     position: absolute;
-    top: 50%;
+    top: 15%;
     right: 100px;
-    transform: translate(0, -50%);
+    /* transform: translate(0, -50%); */
 }
 
 .cta-content h2 {
@@ -364,6 +364,8 @@ input#searchInput:focus {
     border-radius: 44px;
     text-transform: capitalize;
 }
+
+
 
 @media (min-width: 992px) {
     .col-lg-2 {

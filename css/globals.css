@@ -137,6 +137,33 @@ body .container {
 
 
 /* Scroll animation style */
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-animate.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* You can customize globally */
+[data-aos="fade-left"] {
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(50px);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(50px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-50px);
+}
+
 
 /* Scroll animation style */
-
