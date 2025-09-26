@@ -1,0 +1,41 @@
+.ul-class {
+      list-style-type: disc; /* This ensures the dots are shown */
+      padding-left: 20px; /* Adds padding to ensure bullets are not too close to the text */
+    }
+
+    .ul-class li{
+        font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    vertical-align: middle;
+    color: #757577;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    }
+
+    .parameter-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .parameter-card img {
+      max-width: 90px;
+      margin-bottom: 15px;
+    }
+    .parameter-title {
+    font-family: Montserrat;
+    font-weight: 700;
+    line-height: 100%;
+    vertical-align: middle;
+}
+    .parameter-sub {
+      font-size: 14px;
+      color: #666;
+    }
+    .highlight-text {
+      margin-top: 20px;
+      color: #006699;
+      font-weight: 500;
+    }

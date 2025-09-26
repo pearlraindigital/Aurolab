@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Products</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/all-products.css" />
+    <link rel="stylesheet" href="css/iol.css" />
+</head>
+
+<body>
+    <!-- <section id="site-header" data-include="components/header.html"></section> -->
+    <header id="header"></header>
+
+    <section>
+        <img src="images/iol-banner.png" class="img-fluid d-block" alt="all-products">
+    </section>
+
+    <!-- <div class="container mt-sm-5 mt-3">
+            <div class="row">
+                <div class="line-text-module">
+                    <div class="line"></div>
+                    <span class="text">SEE NEW POSSIBILITIES</span>
+                    <div class="line right"></div>
+                </div>
+            </div>
+        </div> -->
+
+    <div class="container mt-sm-5 mb-sm-5  text-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="home-about-content">
+                    <h3 class="section-title mb-3">
+                        Transforming Cataract Care <br>with Custom IOL Solutions
+                    </h3>
+                    <p class="section-para">At Aurolab, we understand the importance of personalized solutions for
+                        cataract care.<br>
+                        With more than two decades of expertise in optical design and machining, we combine passion and
+                        proficiency to continually
+                        <br>advance IOL technology.Today, we have strategically engineered a robust suite of essential
+                        and advanced IOL solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-sm-3 py-2">
+        <img src="images/iol-aurovue.png" class="img-fluid d-block" alt="all-products">
+    </section>
+
+   <section class="py-2 py-sm-3">
+    <div class="container mt-4 mt-sm-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="home-about-content">
+                    <!-- Responsive heading -->
+                    <h3 class="section-title mb-3 fs-4 fs-md-3 fs-lg-2">
+                        Let's talk about Aurovue :<br>
+                        <span class="fw-semibold">Aurolab's proprietary hydrophobic material.</span>
+                    </h3>
+
+                    <!-- Responsive ul wrapper -->
+                    <div class="d-flex justify-content-center">
+                        <ul class="text-start ul-class px-3 px-sm-4" style="max-width: 700px;">
+                            <li class="mb-2">The most important attribute in an IOL has to be its Optical Clarity.</li>
+                            <li>Optical Clarity is determined by physical properties such as Transmittance, Clarity, and Haze of the material.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+  <div class="parameter-card mx-auto">
+    <div class="row g-4">
+      
+      <!-- Transmittance -->
+      <div class="col-md-4 col-12">
+        <div>
+          <img src="transmittance.png" alt="Transmittance"> <!-- replace with your image -->
+          <div class="parameter-title">Transmittance (B/A)<br>90-92%</div>
+        </div>
+      </div>
+      
+      <!-- Clarity -->
+      <div class="col-md-4 col-12">
+        <div>
+          <img src="clarity.png" alt="Clarity">
+          <div class="parameter-title">Clarity 99%</div>
+        </div>
+      </div>
+      
+      <!-- Haze -->
+      <div class="col-md-4 col-12">
+        <div>
+          <img src="haze.png" alt="Haze">
+          <div class="parameter-title">Haze 1.5%</div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Bottom Highlight -->
+    <p class="highlight-text">
+      Aurolab's Aurovue hydrophobic material scores highly on all these parameters
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+    <section class="py-sm-3 py-2 cta-section">
+        <img src="images/all-prod-cta.jpg" alt="cta image" class="img-fluid d-sm-block d-none" />
+        <img src="images/mobile-cta-vision-image.png" alt="cta image" class="img-fluid d-sm-none d-block" />
+
+        <div class="cta-content">
+            <h2>Your Vision,</h2>
+            <h4>Our Mission.</h4>
+            <a class="hover-btn mt-4">
+                <span>Get In Touch</span>
+                <span class="hover-btn__icon">
+                    <svg viewBox="0 0 24 24" class="hover-svg">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- <section id="site-footer" data-include="components/footer.html"></section> -->
+    <footer id="footer"></footer>
+
+    <!-- include fragments loader and component scripts -->
+    <!-- <script src="js/include-components.js"></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script> -->
+    <script src="js/script.js"></script>
+    <script src="header.html"></script>
+    <script src="footer.html"></script>
+
+    <script>
+        /* 1) Cateagory descriptions map (place BEFORE handlers) */
+        const categoryDescriptions = {
+            "All": {
+                heading: "All Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="mask0_234_4235" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                            x="0" y="0" width="24" height="24">
+                                            <rect width="24" height="24" fill="#D9D9D9" />
+                                        </mask>
+                                        <g mask="url(#mask0_234_4235)">
+                                            <path
+                                                d="M3 13V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H11V13H3ZM13 3H19C19.55 3 20.0208 3.19583 20.4125 3.5875C20.8042 3.97917 21 4.45 21 5V9H13V3ZM13 21V11H21V19C21 19.55 20.8042 20.0208 20.4125 20.4125C20.0208 20.8042 19.55 21 19 21H13ZM3 15H11V21H5C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V15ZM5 11H9V5H5V11ZM15 7H19V5H15V7ZM15 13V19H19V13H15ZM5 17V19H9V17H5Z"
+                                                fill="#1C1B1F" />
+                                        </g>
+                                    </svg>`,
+            },
+            "Cataract": {
+                heading: "Cataract Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: ` <svg xmlns="http://www.w3.org/2000/svg" width="114.027" height="65.388"
+                                        viewBox="0 0 114.027 65.388">
+                                        <defs>
+                                            <clipPath id="clip-path">
+                                                <rect id="Rectangle_513" data-name="Rectangle 513" width="114.027"
+                                                    height="65.388" fill="#ffffff"></rect>
+                                            </clipPath>
+                                        </defs>
+                                        <g id="Group_949" data-name="Group 949" transform="translate(-40 8)">
+                                            <g id="Group_948" data-name="Group 948" transform="translate(40 -8)"
+                                                clip-path="url(#clip-path)">
+                                                <path id="Path_742" data-name="Path 742"
+                                                    d="M311.493,42.2c-1.794,2.439-3.426,4.993-5.318,7.365a82.874,82.874,0,0,1-23.428,20.646c-.393.226-.745.642-1.4.49,8.075-7.909,12.393-17.439,12.4-28.711s-4.307-20.819-12.409-28.751c.741-.1,1.15.349,1.606.616,11.51,6.735,20.584,15.986,27.9,27.05.195.294.269.7.653.848Z"
+                                                    transform="translate(-197.466 -9.286)" fill="#ffffff"></path>
+                                                <path id="Path_743" data-name="Path 743"
+                                                    d="M113.984,65.388A32.694,32.694,0,1,1,146.661,32.7a32.762,32.762,0,0,1-32.677,32.687M88.991,32.693A24.973,24.973,0,1,0,113.935,7.72,25.037,25.037,0,0,0,88.991,32.693"
+                                                    transform="translate(-57.041 0)" fill="#ffffff"></path>
+                                                <path id="Path_744" data-name="Path 744"
+                                                    d="M29.948,12.9a45.416,45.416,0,0,0-7.279,9.357,39.263,39.263,0,0,0,6.548,47.351c.257.257.487.542.73.814-.042.04-.082.081-.12.125a64.631,64.631,0,0,1-12.1-8.264A89.161,89.161,0,0,1,.343,42.533a1.3,1.3,0,0,1-.072-1.666c7.447-11.3,16.689-20.73,28.467-27.546.351-.2.726-.367,1.09-.549.038.044.077.086.119.126"
+                                                    transform="translate(0 -8.965)" fill="#ffffff"></path>
+                                                <path id="Path_745" data-name="Path 745"
+                                                    d="M100.06,12.526c.1-.084.2-.173.323-.024l-.2.15c-.042-.04-.081-.082-.119-.126"
+                                                    transform="translate(-70.232 -8.719)" fill="#ffffff"></path>
+                                                <path id="Path_746" data-name="Path 746"
+                                                    d="M100.177,206.151l.2.152c-.122.151-.222.055-.324-.028.038-.043.078-.084.12-.124"
+                                                    transform="translate(-70.229 -144.696)" fill="#ffffff"></path>
+                                                <path id="Path_747" data-name="Path 747"
+                                                    d="M129.626,66.6a18.281,18.281,0,1,1,18.252,18.313A18.311,18.311,0,0,1,129.626,66.6"
+                                                    transform="translate(-90.984 -33.932)" fill="#ffffff"></path>
+                                            </g>
+                                        </g>
+                                    </svg>`,
+            },
+            "Retinal": {
+                heading: "Retinal Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg xmlns="http://www.w3.org/2000/svg" width="92.354" height="71.174"
+                                        viewBox="0 0 92.354 71.174">
+                                        <g id="Group_943" data-name="Group 943" transform="translate(1173 -829.024)">
+                                            <path id="Path_731" data-name="Path 731"
+                                                d="M40.208,0C61.78.128,77.645,12.874,80.518,30.5a29.768,29.768,0,0,1,.166,8.547c-.078.621.064.891.743,1.107,3.023.963,6.019,2,9.023,3.01,1.871.631,2.127,1.062,1.759,2.828q-1.069,5.135-2.122,10.272c-.376,1.832-1.353,2.344-3.2,1.631-3.344-1.29-6.7-2.564-10.012-3.916-.91-.371-1.347-.273-1.9.531C68.664,63.635,59.7,69.095,48.181,70.761c-15.53,2.246-31.057-4.8-38.836-17.477a6.681,6.681,0,0,0-1.5-1.746c-10.479-8.527-10.46-23.454.037-31.984A6.367,6.367,0,0,0,9.253,18.01C16.778,6.273,28.007.441,40.208,0M14.557,35.515c-.045,14.356,12.474,26,28,26.053,15.4.048,27.992-11.583,28.041-25.89.049-14.39-12.475-26.1-27.926-26.117C27.166,9.547,14.6,21.145,14.557,35.515"
+                                                transform="translate(-1173 829.024)" fill="#ffffff"></path>
+                                            <path id="Path_732" data-name="Path 732"
+                                                d="M82.5,40.726c12.963-.1,23.528,9.152,24.761,20.446a23.521,23.521,0,0,1-19.35,25.691,24.1,24.1,0,0,1-24.063-9.975,1.711,1.711,0,0,1-.1-2.153c4.06-7.112,3.988-14.242-.227-21.274a1.528,1.528,0,0,1,.051-1.947C68.337,44.554,75.03,41.031,82.5,40.726"
+                                                transform="translate(-1212.718 800.548)" fill="#ffffff"></path>
+                                            <path id="Path_733" data-name="Path 733"
+                                                d="M56.189,113.394c-3.851-8.447-4-16.4-.231-24.705,5.194,8.256,5.3,16.188.231,24.705"
+                                                transform="translate(-1209.445 763.569)" fill="#ffffff"></path>
+                                            <rect id="Rectangle_507" data-name="Rectangle 507" width="92.353"
+                                                height="71.174" transform="translate(-1173 829.024)" fill="none"></rect>
+                                        </g>
+                                    </svg>`,
+            },
+            "Corneal": {
+                heading: "Corneal Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg xmlns="http://www.w3.org/2000/svg" width="97.594" height="71.052"
+                                        viewBox="0 0 97.594 71.052">
+                                        <g id="Group_947" data-name="Group 947" transform="translate(1236 -1055.446)">
+                                            <g id="Group_945" data-name="Group 945"
+                                                transform="translate(-1236 1063.891)">
+                                                <path id="Path_738" data-name="Path 738"
+                                                    d="M297.777,80.485c.257-4.471.45-8.63,2.163-12.539a10.46,10.46,0,0,1,2.676-3.871,6.722,6.722,0,0,1,7.429-.99A18.727,18.727,0,0,1,321.815,77.9c1.387,7.834-4.258,16.534-11.533,19.352-4.027,1.56-7.409.535-9.595-3.283a20.933,20.933,0,0,1-2.456-8.3c-.2-1.828-.323-3.663-.454-5.182"
+                                                    transform="translate(-224.432 -53.095)" fill="#ffffff"></path>
+                                                <g id="Group_944" data-name="Group 944" transform="translate(0 -8.445)">
+                                                    <path id="Path_734" data-name="Path 734"
+                                                        d="M0,32.588c.212-1.248.392-2.5.643-3.743A31.4,31.4,0,0,1,4.928,17.751c1.532.626,3.051,1.284,4.6,1.863a1.956,1.956,0,0,1,1.288,1.5c.408,1.544.855,3.079,1.312,4.61a3.875,3.875,0,0,0,2.8,2.737,9.4,9.4,0,0,0,2.741.144,1.544,1.544,0,0,0,1.686-1.5,1.516,1.516,0,0,0-1.447-1.726,7.918,7.918,0,0,0-1.586-.051.939.939,0,0,1-1.1-.836c-.357-1.414-.867-2.791-1.2-4.209a4.868,4.868,0,0,0-3.334-3.719C9.36,16.09,8.08,15.494,6.779,14.951A29.076,29.076,0,0,1,13.5,7.805,36.385,36.385,0,0,1,29.574.514,46.453,46.453,0,0,1,38.86.022a3.189,3.189,0,0,1-.866,1.166,42.108,42.108,0,0,0-7.383,10.1,46.647,46.647,0,0,0-5.347,27.043,45.326,45.326,0,0,0,3.524,13.726,47.131,47.131,0,0,0,13.9,18.329,7.245,7.245,0,0,1-3.167.571,37.886,37.886,0,0,1-16.291-2.208A36.933,36.933,0,0,1,9.471,59.516,22.088,22.088,0,0,1,6.8,56.177c2.682-2.522,5.378-5.031,8.034-7.579a1.635,1.635,0,0,1,1.791-.482c1.113.333,2.25.59,3.381.862a2.912,2.912,0,0,0,3.141-.994,16.688,16.688,0,0,0,2.045-3.64,1.523,1.523,0,0,0-.774-2.033,1.657,1.657,0,0,0-2.186.7c-.425.721-.829,1.456-1.2,2.2a.7.7,0,0,1-1,.421c-1.079-.324-2.184-.563-3.279-.832a3.532,3.532,0,0,0-3.528.836Q9.123,49.571,5,53.48a33.13,33.13,0,0,1-4.356-11.3C.389,40.867.212,39.543,0,38.225V37.6a36.623,36.623,0,0,0,4.946-1.833c.933-.39,1.414-.337,1.782.725a2.863,2.863,0,0,0,3.241,2.12c1.786-.2,3.564-.487,5.336-.793a1.561,1.561,0,0,0,1.478-1.81c-.1-.927-.748-1.426-1.909-1.336a19.743,19.743,0,0,0-3.455.469c-1.229.321-1.8.017-2.263-1.176-.714-1.847-2.278-2.411-4.145-1.7C3.332,32.909,1.67,33.593,0,34.258v-1.67"
+                                                        transform="translate(0 -0.001)" fill="#ffffff"></path>
+                                                    <path id="Path_735" data-name="Path 735"
+                                                        d="M0,116.89c1.67-.677,3.332-1.373,5.011-2.025,1.867-.726,3.431-.152,4.145,1.727.461,1.213,1.034,1.524,2.263,1.2a19.426,19.426,0,0,1,3.455-.477c1.161-.092,1.8.416,1.909,1.359A1.582,1.582,0,0,1,15.3,120.51c-1.771.311-3.55.6-5.336.807a2.863,2.863,0,0,1-3.241-2.156c-.368-1.081-.849-1.134-1.782-.738A36.192,36.192,0,0,1,0,120.287v-3.4"
+                                                        transform="translate(0 -82.65)" fill="#ffffff"></path>
+                                                    <path id="Path_736" data-name="Path 736"
+                                                        d="M105.836,70.423A47.118,47.118,0,0,1,91.932,52.1a45.3,45.3,0,0,1-3.524-13.723,46.634,46.634,0,0,1,5.347-27.038,42.109,42.109,0,0,1,7.383-10.093A3.187,3.187,0,0,0,102,.076a36.749,36.749,0,0,1,19.833,7.648,34.942,34.942,0,0,1,9.7,11.619A28.823,28.823,0,0,1,135.151,31.6c-.174-.108-.165-.288-.194-.458a18.869,18.869,0,0,0-3.63-8.468c-2.307-2.972-5.191-5.024-9.178-5.075-3.811-.048-6.7,1.765-9.015,4.55a19.827,19.827,0,0,0-4.391,11.637c-.385,5.61.833,10.792,4.451,15.26,4,4.939,10.175,5.971,15.045,2.39a16.444,16.444,0,0,0,6.692-12.185,2.132,2.132,0,0,1,.422-1.429,31.38,31.38,0,0,1-2.719,11.656,34.565,34.565,0,0,1-8.147,11.663,36.64,36.64,0,0,1-17.594,9.239,5.733,5.733,0,0,1-1.058.042"
+                                                        transform="translate(-64.816 -0.055)" fill="#ffffff"></path>
+                                                    <path id="Path_739" data-name="Path 739"
+                                                        d="M17.615,162.557q4.113-3.986,8.224-7.975a3.489,3.489,0,0,1,3.528-.85c1.1.274,2.2.517,3.279.847a.7.7,0,0,0,1-.428c.372-.762.776-1.509,1.2-2.242a1.643,1.643,0,0,1,2.186-.712,1.558,1.558,0,0,1,.774,2.068,17.042,17.042,0,0,1-2.045,3.7,2.883,2.883,0,0,1-3.141,1.011c-1.131-.276-2.268-.539-3.381-.877a1.617,1.617,0,0,0-1.791.491c-2.656,2.592-5.352,5.143-8.034,7.709a13.888,13.888,0,0,1-1.8-2.744"
+                                                        transform="translate(-12.615 -109.062)" fill="#ffffff"></path>
+                                                    <path id="Path_740" data-name="Path 740"
+                                                        d="M19.213,53.579c1.3.552,2.581,1.158,3.906,1.642A4.922,4.922,0,0,1,26.454,59c.331,1.443.842,2.844,1.2,4.282a.943.943,0,0,0,1.105.85,7.783,7.783,0,0,1,1.586.051,1.535,1.535,0,0,1,1.447,1.755A1.554,1.554,0,0,1,30.1,67.465a9.239,9.239,0,0,1-2.741-.147,3.907,3.907,0,0,1-2.8-2.783c-.457-1.557-.9-3.118-1.312-4.689a1.98,1.98,0,0,0-1.289-1.525c-1.55-.588-3.069-1.258-4.6-1.895a9.153,9.153,0,0,1,1.851-2.848"
+                                                        transform="translate(-12.434 -38.689)" fill="#ffffff"></path>
+                                                </g>
+                                            </g>
+                                            <g id="Group_946" data-name="Group 946"
+                                                transform="translate(-1234.716 1058.172)">
+                                                <path id="Path_741" data-name="Path 741"
+                                                    d="M-1189.7,1070.66l-12.112-3.325-25.286,12.554s-4.9,11.677-4.953,12.291-2.327,12.094-2.327,12.094l5.361,10.4-.952,3.158,7.43,8.923,16.387,8.9h10.484l4.66-2.26s-6.544-33.51-6.641-34.1S-1189.7,1070.66-1189.7,1070.66Z"
+                                                    transform="translate(1234.378 -1067.335)" fill="#ffffff"></path>
+                                            </g>
+                                        </g>
+                                    </svg>`,
+            },
+            "Glaucoma": {
+                heading: "Glaucoma Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg id="Group_953" data-name="Group 953" xmlns="http://www.w3.org/2000/svg"
+                                        width="84.342" height="69.953" viewBox="0 0 84.342 69.953">
+                                        <defs>
+                                            <clipPath id="clip-path">
+                                                <rect id="Rectangle_515" data-name="Rectangle 515" width="84.342"
+                                                    height="69.953" fill="#ffffff"></rect>
+                                            </clipPath>
+                                        </defs>
+                                        <g id="Group_952" data-name="Group 952" clip-path="url(#clip-path)">
+                                            <path id="Path_757" data-name="Path 757"
+                                                d="M95.291,118.951a31.176,31.176,0,0,1-8.914,0,4.093,4.093,0,0,0-1.233-.193l-.345-.038a4.674,4.674,0,0,0-.489-.173,28.958,28.958,0,0,1-16.779-10.721A28.482,28.482,0,0,1,61.87,84.268c1.77-9.247,6.978-16.081,15.208-20.625a34.1,34.1,0,0,1,7.888-2.876l.355-.029,1.055-.182a31.386,31.386,0,0,1,8.916,0,29.538,29.538,0,0,1,0,58.393m-11.347-8.415c.311.011.465-.231.649-.414q1.8-1.786,3.583-3.58,11.373-11.373,22.762-22.731a1.445,1.445,0,0,0,.393-1.839,26.536,26.536,0,0,0-2.529-4.761c-.326-.482-.535-.393-.866-.041-.568.6-1.168,1.177-1.754,1.764L78.535,106.582c-.769.769-.764.763.174,1.4a23.78,23.78,0,0,0,4.642,2.372c.192.076.394.123.593.184M98.7,69.313c-.433-.115-.673.167-.927.421Q84.3,83.207,70.824,96.672a1.154,1.154,0,0,0-.285,1.422,21.872,21.872,0,0,0,2.473,4.391c.591.856.587.86,1.325.122L103.67,73.276a3.281,3.281,0,0,1,.316-.311c.369-.28.293-.533-.039-.765-.58-.4-1.144-.84-1.757-1.188a25.355,25.355,0,0,0-3.487-1.7M69.019,90.177,91.234,67.961c-11.616-.787-22.9,9.7-22.215,22.215m43.607.274-21.106,21.1c11.272.191,21.335-10.1,21.106-21.1"
+                                                transform="translate(-48.772 -47.952)" fill="#ffffff"></path>
+                                            <path id="Path_758" data-name="Path 758"
+                                                d="M204.694,116.647a28.172,28.172,0,0,0,0-55.692c.751-.4,1.506-.029,2.225.07A43.957,43.957,0,0,1,219.58,64.7a45.468,45.468,0,0,1,11.652,7.81,46.921,46.921,0,0,1,10.558,14.2c.271.557.5,1.136.764,1.694a.96.96,0,0,1-.041.887,56.427,56.427,0,0,1-2.758,5.323,47.17,47.17,0,0,1-7.289,9.363,43.653,43.653,0,0,1-16.081,10.295,42.535,42.535,0,0,1-9.971,2.354c-.575.06-1.142.34-1.721.024"
+                                                transform="translate(-158.304 -46.999)" fill="#ffffff"></path>
+                                            <path id="Path_759" data-name="Path 759"
+                                                d="M36.543,61.8A32.52,32.52,0,0,0,29.02,64.54c-7.849,4.334-12.816,10.851-14.5,19.671a27.163,27.163,0,0,0,5.4,22.469,27.619,27.619,0,0,0,16,10.225,4.47,4.47,0,0,1,.466.165c-.591.5-1.215.07-1.773-.023a43.709,43.709,0,0,1-12.875-4.155,47.176,47.176,0,0,1-9.479-6.419A46.611,46.611,0,0,1,1.118,92.179C.727,91.4.438,90.572.073,89.78a.821.821,0,0,1,.022-.716A40.166,40.166,0,0,1,6.481,78.383a44.7,44.7,0,0,1,4.19-4.522,47.327,47.327,0,0,1,13.435-8.916A48.419,48.419,0,0,1,35.58,61.66a1,1,0,0,1,.963.137"
+                                                transform="translate(0 -47.641)" fill="#ffffff"></path>
+                                            <path id="Path_760" data-name="Path 760"
+                                                d="M100.569,13a2.688,2.688,0,0,1-4.111,2.231c-1.079-.612-2.082-1.355-3.143-2A52.63,52.63,0,0,0,70.288,5.66a53.528,53.528,0,0,0-35.415,9.2,3.267,3.267,0,0,1-2.673.771A2.586,2.586,0,0,1,30.16,13.59a2.609,2.609,0,0,1,1.18-2.866,60.385,60.385,0,0,1,5.984-3.68A57.658,57.658,0,0,1,56.5.664a58.812,58.812,0,0,1,42.752,9.924A2.75,2.75,0,0,1,100.569,13"
+                                                transform="translate(-23.267 0)" fill="#ffffff"></path>
+                                            <path id="Path_761" data-name="Path 761"
+                                                d="M163.744,61.016l-1.006.173c.253-.536.638-.3,1.006-.173"
+                                                transform="translate(-125.856 -47.061)" fill="#ffffff"></path>
+                                        </g>
+                                    </svg>`,
+            },
+            "Orbit & Oculoplasty": {
+                heading: "Orbit & Oculoplasty Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg xmlns="http://www.w3.org/2000/svg" width="78.44" height="78.44"
+                                        viewBox="0 0 78.44 78.44">
+                                        <path style="" id="Icon_awesome-bullseye"
+                                            data-name="Icon awesome-bullseye"
+                                            d="M39.22.562a39.22,39.22,0,1,0,39.22,39.22A39.219,39.219,0,0,0,39.22.562Zm0,68.319a29.1,29.1,0,1,1,29.1-29.1A29.083,29.083,0,0,1,39.22,68.881Zm0-49.341A20.243,20.243,0,1,0,59.463,39.783,20.243,20.243,0,0,0,39.22,19.54Zm0,30.364A10.121,10.121,0,1,1,49.341,39.783,10.133,10.133,0,0,1,39.22,49.9Z"
+                                            transform="translate(0 -0.563)" fill="#fff"></path>
+                                    </svg>`,
+            },
+            "General": {
+                heading: "General Ophthalmic Products",
+                desc: "Innovative and reliable retinal care solutions designed to preserve and restore vision. Empowering specialists with advanced, accessible, and precision-driven tools for sight-saving care.",
+                sub: `<svg xmlns="http://www.w3.org/2000/svg" width="96.951" height="64.634"
+                                        viewBox="0 0 96.951 64.634">
+                                        <path style="" id="Icon_awesome-eye" data-name="Icon awesome-eye"
+                                            d="M96.365,34.359C87.237,16.55,69.167,4.5,48.475,4.5S9.708,16.558.586,34.361a5.445,5.445,0,0,0,0,4.913c9.128,17.81,27.2,29.859,47.89,29.859s38.767-12.058,47.89-29.861A5.445,5.445,0,0,0,96.365,34.359Zm-47.89,26.7A24.238,24.238,0,1,1,72.713,36.817,24.238,24.238,0,0,1,48.475,61.055Zm0-40.4a16.042,16.042,0,0,0-4.26.638,8.054,8.054,0,0,1-11.26,11.26,16.121,16.121,0,1,0,15.521-11.9Z"
+                                            transform="translate(0 -4.5)" fill="#fff"></path>
+                                    </svg>`,
+            }
+        };
+
+        function updateCategoryText(cat) {
+            const data = categoryDescriptions[cat] || categoryDescriptions["All"];
+            const h = document.getElementById('categoryHeading');
+            const d1 = document.getElementById('categoryDescriptions');
+            const d2 = document.getElementById('categorySubDescriptions');
+            if (h) h.textContent = data.heading;
+            if (d1) d1.textContent = data.desc;
+            if (d2) d2.innerHTML = data.sub;
+            console.log('data heading', data.heading);
+        }
+
+
+
+
+        // Product Data (updated with requested categories & tags)
+        const products = [
+            // ✅ Cataract
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "label": "popular",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "label": "popular",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "label": "popular",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "CataPharma",
+                "tag": "Pharma",
+                "category": "Cataract",
+                "description": "CataPharma is an ophthalmic solution supporting cataract procedures.",
+                "slug": "catapharma",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "CataEquip",
+                "tag": "Equipment",
+                "category": "Cataract",
+                "description": "CataEquip is a precision phacoemulsification system for cataract removal.",
+                "slug": "cataequip",
+                "label": "popular",
+                "image": "images/prod-img-5.jpg"
+            },
+
+            // ✅ Retinal
+            {
+                "name": "Flures",
+                "tag": "Pharma",
+                "category": "Retinal",
+                "description": "Flures contains Fluorescein sodium equivalent to Fluorescein 20% w/v.",
+                "slug": "flures",
+                "label": "popular",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "RetinaSuture",
+                "tag": "Suture",
+                "category": "Retinal",
+                "description": "RetinaSuture is designed for delicate retinal surgical procedures.",
+                "slug": "retina-suture",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "RetinaScope",
+                "tag": "Equipment",
+                "category": "Retinal",
+                "description": "RetinaScope is advanced imaging equipment for retinal diagnostics.",
+                "slug": "retinascope",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "RetinaSuture",
+                "tag": "Suture",
+                "category": "Retinal",
+                "description": "RetinaSuture is designed for delicate retinal surgical procedures.",
+                "slug": "retina-suture",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "RetinaScope",
+                "tag": "Equipment",
+                "category": "Retinal",
+                "description": "RetinaScope is advanced imaging equipment for retinal diagnostics.",
+                "slug": "retinascope",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "RetinaSuture",
+                "tag": "Suture",
+                "category": "Retinal",
+                "description": "RetinaSuture is designed for delicate retinal surgical procedures.",
+                "slug": "retina-suture",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "RetinaScope",
+                "tag": "Equipment",
+                "category": "Retinal",
+                "description": "RetinaScope is advanced imaging equipment for retinal diagnostics.",
+                "slug": "retinascope",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "RetinaSuture",
+                "tag": "Suture",
+                "category": "Retinal",
+                "description": "RetinaSuture is designed for delicate retinal surgical procedures.",
+                "slug": "retina-suture",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "RetinaScope",
+                "tag": "Equipment",
+                "category": "Retinal",
+                "description": "RetinaScope is advanced imaging equipment for retinal diagnostics.",
+                "slug": "retinascope",
+                "image": "images/prod-img-2.jpg"
+            },
+
+            // ✅ Corneal
+            {
+                "name": "Aurocor",
+                "tag": "Pharma",
+                "category": "Corneal",
+                "label": "popular",
+                "description": "Aurocor is an ophthalmic solution indicated for corneal disorders.",
+                "slug": "aurocor",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "CorneaFix",
+                "tag": "Suture",
+                "category": "Corneal",
+                "label": "popular",
+                "description": "CorneaFix sutures are designed for corneal graft and repair procedures.",
+                "slug": "corneafix",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "AuroCor Device",
+                "tag": "Equipment",
+                "category": "Corneal",
+                "description": "AuroCor Device is specialized equipment designed for corneal transplant procedures.",
+                "slug": "aurocor-device",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "CorneaFix",
+                "tag": "Suture",
+                "category": "Corneal",
+                "description": "CorneaFix sutures are designed for corneal graft and repair procedures.",
+                "slug": "corneafix",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "AuroCor Device",
+                "tag": "Equipment",
+                "category": "Corneal",
+                "description": "AuroCor Device is specialized equipment designed for corneal transplant procedures.",
+                "slug": "aurocor-device",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "CorneaFix",
+                "tag": "Suture",
+                "category": "Corneal",
+                "description": "CorneaFix sutures are designed for corneal graft and repair procedures.",
+                "slug": "corneafix",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "AuroCor Device",
+                "tag": "Equipment",
+                "category": "Corneal",
+                "description": "AuroCor Device is specialized equipment designed for corneal transplant procedures.",
+                "slug": "aurocor-device",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "CorneaFix",
+                "tag": "Suture",
+                "category": "Corneal",
+                "description": "CorneaFix sutures are designed for corneal graft and repair procedures.",
+                "slug": "corneafix",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "AuroCor Device",
+                "tag": "Equipment",
+                "category": "Corneal",
+                "description": "AuroCor Device is specialized equipment designed for corneal transplant procedures.",
+                "slug": "aurocor-device",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "CorneaFix",
+                "tag": "Suture",
+                "category": "Corneal",
+                "description": "CorneaFix sutures are designed for corneal graft and repair procedures.",
+                "slug": "corneafix",
+                "image": "images/prod-img-6.jpg"
+            },
+
+            // ✅ Glaucoma
+            {
+                "name": "Auroprost RT",
+                "tag": "Suture",
+                "category": "Glaucoma",
+                "description": "Auroprost RT is a sterile ophthalmic solution containing 0.005%.",
+                "slug": "auroprost-rt",
+                "label": "popular",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "GlaucoSuture",
+                "tag": "Pharma",
+                "category": "Glaucoma",
+                "description": "GlaucoSuture is designed for trabeculectomy and glaucoma drainage surgeries.",
+                "slug": "glaucosuture",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "GlaucoMeter",
+                "tag": "Equipment",
+                "category": "Glaucoma",
+                "description": "GlaucoMeter is a handheld tonometer for intraocular pressure monitoring.",
+                "slug": "glaucometer",
+                "label": "popular",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "GlaucoSuture",
+                "tag": "Suture",
+                "category": "Glaucoma",
+                "description": "GlaucoSuture is designed for trabeculectomy and glaucoma drainage surgeries.",
+                "slug": "glaucosuture",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "GlaucoMeter",
+                "tag": "Equipment",
+                "category": "Glaucoma",
+                "description": "GlaucoMeter is a handheld tonometer for intraocular pressure monitoring.",
+                "slug": "glaucometer",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "GlaucoSuture",
+                "tag": "Suture",
+                "category": "Glaucoma",
+                "description": "GlaucoSuture is designed for trabeculectomy and glaucoma drainage surgeries.",
+                "slug": "glaucosuture",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "GlaucoMeter",
+                "tag": "Equipment",
+                "category": "Glaucoma",
+                "description": "GlaucoMeter is a handheld tonometer for intraocular pressure monitoring.",
+                "slug": "glaucometer",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "GlaucoSuture",
+                "tag": "Suture",
+                "category": "Glaucoma",
+                "description": "GlaucoSuture is designed for trabeculectomy and glaucoma drainage surgeries.",
+                "slug": "glaucosuture",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "GlaucoMeter",
+                "tag": "Equipment",
+                "category": "Glaucoma",
+                "description": "GlaucoMeter is a handheld tonometer for intraocular pressure monitoring.",
+                "slug": "glaucometer",
+                "image": "images/prod-img-3.jpg"
+            },
+
+            // ✅ Orbit & Oculoplasty
+            {
+                "name": "OrbitPharma",
+                "tag": "Pharma",
+                "category": "Orbit & Oculoplasty",
+                "description": "OrbitPharma supports post-oculoplastic care with sterile formulations.",
+                "slug": "orbitpharma",
+                "image": "images/prod-img-4.jpg"
+            },
+            {
+                "name": "OrbitFix",
+                "tag": "Suture",
+                "category": "Orbit & Oculoplasty",
+                "description": "OrbitFix sutures are specialized for reconstructive oculoplastic procedures.",
+                "slug": "orbitfix",
+                "label": "popular",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "AuroOrbit",
+                "tag": "Equipment",
+                "category": "Orbit & Oculoplasty",
+                "description": "AuroOrbit set is used in reconstructive and oculoplastic procedures.",
+                "slug": "auroorbit",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "OrbitFix",
+                "tag": "Suture",
+                "category": "Orbit & Oculoplasty",
+                "description": "OrbitFix sutures are specialized for reconstructive oculoplastic procedures.",
+                "slug": "orbitfix",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "AuroOrbit",
+                "tag": "Equipment",
+                "category": "Orbit & Oculoplasty",
+                "description": "AuroOrbit set is used in reconstructive and oculoplastic procedures.",
+                "slug": "auroorbit",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "OrbitFix",
+                "tag": "Suture",
+                "category": "Orbit & Oculoplasty",
+                "description": "OrbitFix sutures are specialized for reconstructive oculoplastic procedures.",
+                "slug": "orbitfix",
+                "label": "popular",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "AuroOrbit",
+                "tag": "Equipment",
+                "category": "Orbit & Oculoplasty",
+                "description": "AuroOrbit set is used in reconstructive and oculoplastic procedures.",
+                "slug": "auroorbit",
+                "image": "images/prod-img-4.jpg"
+            },
+
+            // ✅ General
+            {
+                "name": "GenPharma",
+                "tag": "Pharma",
+                "category": "General",
+                "description": "GenPharma is a broad-spectrum ophthalmic solution for general eye care.",
+                "slug": "genpharma",
+                "image": "images/prod-img-5.jpg"
+            },
+            {
+                "name": "AuroSuture Plus",
+                "tag": "Suture",
+                "category": "General",
+                "description": "AuroSuture Plus is a sterile surgical suture suitable for ophthalmic use.",
+                "slug": "aurosuture-plus",
+                "label": "popular",
+                "image": "images/prod-img-6.jpg"
+            },
+            {
+                "name": "Auro Trocar",
+                "tag": "Equipment",
+                "category": "General",
+                "description": "Aurotrocar is a self sealing ophthalmic trocar, designed and tested.",
+                "slug": "auro-trocar",
+                "image": "images/prod-img-1.jpg"
+            },
+            {
+                "name": "GenPharma",
+                "tag": "Pharma",
+                "category": "General",
+                "description": "GenPharma is a broad-spectrum ophthalmic solution for general eye care.",
+                "slug": "genpharma",
+                "image": "images/prod-img-2.jpg"
+            },
+            {
+                "name": "AuroSuture Plus",
+                "tag": "Suture",
+                "category": "General",
+                "description": "AuroSuture Plus is a sterile surgical suture suitable for ophthalmic use.",
+                "slug": "aurosuture-plus",
+                "label": "popular",
+                "image": "images/prod-img-3.jpg"
+            },
+            {
+                "name": "Auro Trocar",
+                "tag": "Equipment",
+                "category": "General",
+                "description": "Aurotrocar is a self sealing ophthalmic trocar, designed and tested.",
+                "slug": "auro-trocar",
+                "image": "images/prod-img-4.jpg"
+            }
+        ];
+
+
+
+        // Product Data (updated with requested categories & tags)
+
+        // State
+        let currentCategory = "All";
+        let currentTag = "All";
+
+        const els = {
+            productList: document.getElementById('productList'),
+            resultMeta: document.getElementById('resultMeta'),
+            categoryList: document.getElementById('categoryList'),
+            tagBar: document.getElementById('tagBar'),
+            searchInput: document.getElementById('searchInput')
+        };
+
+        function renderProducts(list) {
+            const wrapper = document.getElementById('viewAllWrapper');
+            els.productList.innerHTML = '';
+            wrapper.innerHTML = '';
+
+            if (!list.length) {
+                els.productList.innerHTML = '<!-- <p class="text-muted">No products found.</p> -->';
+                els.resultMeta.textContent = metaText(0);
+                return;
+            }
+
+            const pageSize = 8;
+            let shown = 0;
+
+            const appendCards = (items) => {
+                items.forEach(p => {
+                    const card = document.createElement('a');
+                    card.className = 'product-card';
+                    card.href = `product/${p.slug}.html`;
+                    card.innerHTML = `
+                        <div class="img-container">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy" />
+                        ${p.label ? `<p class="label-text">${p.label}</p>` : ""}    
+                        </div>
+                        <div>
+                        <div class="card-content">
+                            <h3 class="h5 mb-0">${p.name}</h3>
+                            <p class="mb-0">${p.description}</p>
+                        </div>
+                        </div>
+                        <div class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path style="fill: #fff;" d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg>
+                        </div>
+                        <div class="top-corner"><div class="semicircle"></div></div>
+                        <div class="bottom-corner"><div class="semicircle"></div></div>
+                    `;
+                    els.productList.appendChild(card);
+                });
+            };
+
+            // initial 8
+            appendCards(list.slice(0, pageSize));
+            shown = Math.min(pageSize, list.length);
+
+            if (shown < list.length) {
+                // Create the custom button element
+                const btn = document.createElement('button');
+                btn.className = 'hover-btn'; // Apply the custom class for styling
+
+                // Set the button text dynamically as per your original code
+                const setBtnText = () => {
+                    const remaining = list.length - shown;
+                    btn.innerHTML = `
+                        <span>Button text</span>
+                       <!-- <span class="hover-btn__icon">
+                            <svg viewBox="0 0 24 24" class="hover-svg">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span> -->
+                    `;
+                    // Change the button text based on the remaining items
+                    const buttonText = remaining >= pageSize ? 'View more' : `View ${remaining} more`;
+                    btn.querySelector('span').textContent = buttonText;
+                };
+                setBtnText();
+
+                // Add event listener for the click action
+                btn.addEventListener('click', () => {
+                    const next = Math.min(shown + pageSize, list.length);
+                    appendCards(list.slice(shown, next)); // Append the next set of cards
+                    shown = next;
+                    if (shown >= list.length) {
+                        btn.remove(); // Remove the button when all items are shown
+                    } else {
+                        setBtnText(); // Update button text if there are more items to show
+                    }
+                });
+
+                // Append the button to the wrapper
+                wrapper.appendChild(btn);
+            }
+
+
+            els.resultMeta.textContent = metaText(list.length);
+        }
+
+        function metaText(count) {
+            let scope = [];
+            if (currentCategory !== 'All') scope.push(currentCategory);
+            if (currentTag !== 'All') scope.push(currentTag);
+            const scopeText = scope.length ? ` in ${scope.join(' · ')}` : '';
+            const q = els.searchInput.value.trim();
+            const qText = q ? ` for "${q}"` : '';
+            return `${count} result${count === 1 ? '' : 's'}${scopeText}${qText}`;
+        }
+
+        function applyFilters() {
+            const q = els.searchInput.value.trim().toLowerCase();
+            const filtered = products.filter(p => {
+                const inCategory = currentCategory === 'All' || p.category === currentCategory;
+                const inTag = currentTag === 'All' || p.tag === currentTag;
+                const inSearch = !q || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
+                return inCategory && inTag && inSearch;
+            });
+            renderProducts(filtered);
+        }
+
+        // Category click (event delegation)
+        els.categoryList.addEventListener('click', (e) => {
+            const item = e.target.closest('.list-group-item');
+            if (!item) return;
+            // visual active
+            [...els.categoryList.children].forEach(li => li.classList.remove('active'));
+            item.classList.add('active');
+            // state
+            currentCategory = item.dataset.category;
+            // When category changes, keep current tag and search as-is
+            updateCategoryText(currentCategory);
+            applyFilters();
+        });
+
+        // Tag bar click (event delegation)
+        els.tagBar.addEventListener('click', (e) => {
+            const btn = e.target.closest('button[data-tag]');
+            if (!btn) return;
+            // visual active
+            [...els.tagBar.querySelectorAll('button')].forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // state
+            currentTag = btn.dataset.tag;
+            applyFilters();
+        });
+
+        // Search input
+        els.searchInput.addEventListener('input', applyFilters);
+
+        // Initial render
+        renderProducts(products);
+        updateCategoryText(currentCategory); 
+    </script>
+
+    <script>
+        // 1️⃣ Extract unique tags
+        const uniqueTags = ["All", ...new Set(products.map(product => product.tag))];
+
+        // 2️⃣ Filter tags with available products
+        const validTags = uniqueTags.filter(tag => {
+            return tag === "All" || products.some(product => product.tag === tag);
+        });
+
+        // 3️⃣ Only show the tag bar if there are valid tags
+        const tagBar = document.getElementById('tagBar');
+        if (validTags.length > 1) { // more than just "All"
+            validTags.forEach((tag, index) => {
+                const btn = document.createElement('button');
+                btn.type = "button";
+                btn.className = `tag-btn${index === 0 ? ' active' : ''}`; // first one active
+                btn.dataset.tag = tag;
+                btn.textContent = tag;
+                tagBar.appendChild(btn);
+            });
+
+            // 4️⃣ Optional: Add click event to filter products by tag
+            tagBar.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tag-btn')) {
+                    const selectedTag = e.target.dataset.tag;
+
+                    // Highlight active button
+                    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    // Filter products
+                    const filteredProducts = selectedTag === 'All'
+                        ? products
+                        : products.filter(p => p.tag === selectedTag);
+
+                    console.log(filteredProducts); // replace with code to display products
+                }
+            });
+        } else {
+            // If there are no valid tags, hide the tag bar
+            tagBar.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
