@@ -217,6 +217,120 @@ img.possible-product-image {
     font-weight: bold;
 }
 
+.home-category-card {
+    padding: 5px;
+}
+
+.home-category-img {
+    margin-bottom: 10px;
+}
+
+.home-category-card,
+.home-category-img,
+.card-bottom {
+    border: 0.92px solid #C2C2C2;
+    border-radius: 16px;
+}
+
+.division-label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 44px;
+    padding: 6px 15px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.division-label.pink-label {
+    background: #F9EAEF;
+    color: #BF2D61;
+}
+
+.card-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 28px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000;
+}
+
+.card-content p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 22px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #757577;
+}
+
+
+.arrow {
+    /* width: 50px;
+    height: 50px; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    border-top-left-radius: 16px;
+}
+
+.arrow svg {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    padding: 9px;
+    /* background-color: var(--token-ee5ffa32-176c-49f9-ad45-dd55368bee3b, rgb(237, 228, 252)); */
+    background-color: #006380;
+    transition: all 300ms;
+    transform: rotate(-40deg);
+}
+
+.top-corner,
+.bottom-corner {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #fff;
+    overflow: hidden;
+    transform: rotate(270deg);
+}
+
+.top-corner {
+    top: 115px;
+    right: 8px;
+}
+
+.bottom-corner {
+    top: 158px;
+    right: 53px;
+}
+
+
+.bottom-corner .semicircle {
+    background-color: #e6edf5;
+}
+
+.top-corner .semicircle {
+    background-color: #d3dae4;
+}
+
+
 /* compact on very small screens */
 @media (max-width:480px) {
     .vbtn {

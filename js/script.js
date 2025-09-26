@@ -29,6 +29,23 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('why-choose-section.html')
+        .then(response => response.text())
+        .then(html => {
+            // Create a temporary div element
+            const tempDiv = document.createElement('div');
+            // Set the HTML content of the temporary div with fetched HTML
+            tempDiv.innerHTML = html;
+            // Get the entire section content from the temporary div
+            const whychooseContent = tempDiv.querySelector('.why-section').innerHTML; // Assuming the section is inside the 'why-section' class
+            // Insert the content into the #why_choose_section element
+            document.getElementById('why_choose_section').innerHTML = whychooseContent;
+        });
+});
+
+
+
 // scroll animation start
 
 // Intersection Observer Options

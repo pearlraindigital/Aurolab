@@ -13,6 +13,10 @@
     border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+.footer-section li {
+    list-style: none;
+}
+
 .footer-inner {
     display: flex;
     gap: 1.5rem;
@@ -152,6 +156,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .footer-btn-content p {
@@ -161,6 +166,7 @@
     font-size: 12px;
     color: #fff;
     line-height: 1.4;
+    margin-bottom: 0;
 }
 
 .hover-btn:hover h4,
