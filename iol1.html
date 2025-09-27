@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Effect Staggered</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 10%;
+      width: 100%;
+      background: linear-gradient(to right, #fff, #f5f9fc);
+      min-height: 100vh;
+    }
+    .left-content {
+      max-width: 50%;
+      padding-right: 40px;
+    }
+    .left-content small {
+      font-size: 0.9rem;
+      color: #666;
+      display: block;
+      margin-bottom: 10px;
+      opacity:0; transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .left-content h2 {
+      font-size: 2.5rem;
+      color: #007393;
+      font-weight: 800;
+      margin-bottom: 10px;
+      opacity:0; transform: translateY(30px);
+      transition: all 0.6s ease 0.2s;
+    }
+    .left-content p {
+      font-size: 1rem;
+      color: #5d5d5d;
+      margin-bottom: 30px;
+      opacity:0; transform: translateY(30px);
+      transition: all 0.6s ease 0.4s;
+    }
+    .left-content button {
+      padding: 12px 28px;
+      background-color: #007393;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s ease, all 0.6s ease 0.6s;
+      opacity:0; transform: translateY(30px);
+    }
+    .left-content button:hover { background-color: #005a72; }
+
+    .right-image {
+      max-width: 35%;
+      text-align: right;
+      opacity:0;
+      transform: translateX(100px);
+      transition: all 0.8s ease 0.8s;
+    }
+    .right-image img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+    }
+
+    /* When active */
+    .section.in-view small,
+    .section.in-view h2,
+    .section.in-view p,
+    .section.in-view button,
+    .section.in-view .right-image {
+      opacity:1;
+      transform: translate(0,0);
+    }
+
+    /* Greyed out inactive sections */
+    .left-content.grey-text h2,
+    .left-content.grey-text p { color: #b5b5b5; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section" id="frame120">
+      <div class="left-content">
+        <small>Technology 1</small>
+        <h2>HYDROPHILIC</h2>
+        <p>Foldable IOL<br>Enhanced performance for seamless implantation.</p>
+        <button>View Products</button>
+      </div>
+      <div class="right-image">
+        <img src="images/essence.png" alt="Hydrophilic IOL">
+      </div>
+    </div>
+
+    <div class="section" id="frame121">
+      <div class="left-content">
+        <small>Technology 2</small>
+        <h2>HYDROPHOBIC</h2>
+        <p>Foldable IOL<br>Advanced technology offering clarity and long-term stability.</p>
+        <button>View Products</button>
+      </div>
+      <div class="right-image">
+        <img src="images/ev-gold.png" alt="Hydrophobic IOL">
+      </div>
+    </div>
+
+    <div class="section" id="frame122">
+      <div class="left-content">
+        <small>Technology 3</small>
+        <h2>PMMA</h2>
+        <p>Durable, reliable, and enhanced solutions for excellent refractive care.</p>
+        <button>View Products</button>
+      </div>
+      <div class="right-image">
+        <img src="images/spac-iol.png" alt="PMMA IOL">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('.section');
+      
+      sections.forEach((section, index) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
+
+        if (sectionTop < window.innerHeight - 150 && sectionTop + sectionHeight > 0) {
+          section.classList.add('in-view');
+
+          if (index === 0) sections[1].querySelector('.left-content').classList.add('grey-text');
+          if (index === 1) sections[2].querySelector('.left-content').classList.add('grey-text');
+        } else {
+          section.classList.remove('in-view');
+          if (index === 0) sections[1].querySelector('.left-content').classList.remove('grey-text');
+          if (index === 1) sections[2].querySelector('.left-content').classList.remove('grey-text');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
